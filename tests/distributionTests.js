@@ -85,12 +85,12 @@ QUnit.module("Distributions", function() {
         
         var round4 = function(n) { return round(n, 4); };
         
-        assert.equal(round4(distribution.densityAt(0)), .1176);
-        assert.equal(round4(distribution.densityAt(1)), .3025);
-        assert.equal(round4(distribution.densityAt(2)), .3241);
-        assert.equal(round4(distribution.densityAt(3)), .1852);
-        assert.equal(round4(distribution.densityAt(4)), .0595);
-        assert.equal(round4(distribution.densityAt(5)), .0102);
+        assert.equal(round4(distribution.densityAt(0)), .1176, "Density at 0");
+        assert.equal(round4(distribution.densityAt(1)), .3025, "Density at 1");
+        assert.equal(round4(distribution.densityAt(2)), .3241, "Density at 2");
+        assert.equal(round4(distribution.densityAt(3)), .1852, "Density at 3");
+        assert.equal(round4(distribution.densityAt(4)), .0595, "Density at 4");
+        assert.equal(round4(distribution.densityAt(5)), .0102, "Density at 5");
     });
     
         QUnit.test("Create Normal", function( assert ) {
@@ -107,12 +107,12 @@ QUnit.module("Distributions", function() {
         
         var round4 = function(n) { return round(n, 4); };
         
-        assert.equal(round4(distribution.densityAt(0)), .1065);
-        assert.equal(round4(distribution.densityAt(1)), .1258);
-        assert.equal(round4(distribution.densityAt(2)), .133);
-        assert.equal(round4(distribution.densityAt(3)), .1258);
-        assert.equal(round4(distribution.densityAt(4)), .1065);
-        assert.equal(round4(distribution.densityAt(5)), .0807);
+        assert.equal(round4(distribution.densityAt(0)), .1065, "Density at 0");
+        assert.equal(round4(distribution.densityAt(1)), .1258, "Density at 1");
+        assert.equal(round4(distribution.densityAt(2)), .133, "Density at 2");
+        assert.equal(round4(distribution.densityAt(3)), .1258, "Density at 3");
+        assert.equal(round4(distribution.densityAt(4)), .1065, "Density at 4");
+        assert.equal(round4(distribution.densityAt(5)), .0807, "Density at 5");
     });
     
     QUnit.test("factorial", function( assert ) {
@@ -127,5 +127,14 @@ QUnit.module("Distributions", function() {
         assert.equal(Distributions.choose(4, 1), 4); 
         assert.equal(Distributions.choose(4, 0), 1); 
     });
+    
+    /*
+    QUnit.test("TODO", function( assert ) {
+        var actual = 0;
+        var expected = 1;
+        assert.equal(actual, expected, "message");
+    }); 
+    */
+
 
 });

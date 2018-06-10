@@ -143,17 +143,18 @@
         this.densityAt = densityAt;
     }
     
+    let twoPi = Math.PI * 2;
+    
     function Normal(mean, stdv) {
         this.mean = mean;
         this.stdv = stdv;
         
-        let twoPi = Math.PI * 2;
-        let v = stdv * stdv;
-        let c = 1 / Math.sqrt(twoPi * v);
-        let twoV = 2*v;
+        let variance = stdv * stdv;
+        let c = 1 / Math.sqrt(twoPi * variance);
+        let twoV = 2*variance;
         
-        function densityAt(value) {
-            let a = (value - mean) * (value - mean);
+        function densityAt(x) {
+            let a = (x - mean) * (x - mean);
             let e = a / twoV;
             return c * Math.exp(-e); 
         }
