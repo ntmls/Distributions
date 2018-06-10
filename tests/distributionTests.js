@@ -1,3 +1,4 @@
+/* global QUnit, Distributions */
 QUnit.module("Distributions", function() {
 
 
